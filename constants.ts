@@ -8,7 +8,7 @@ export const METADATA = {
   title: "Portfolio | Ulvin Najafov",
   description:
     "I bridge the gap between web development and game development. I take responsibility to craft an aesthetic user experience using modern frontend architecture.",
-  siteUrl: "https://ulikgames.vercel.app",
+  siteUrl: "https://ulik.vercel.app",
 };
 
 export const MENULINKS = [
@@ -38,7 +38,6 @@ export const TYPED_STRINGS = [
   "I design and develop things",
   "I develop modern frontend apps",
   "I develop games with UE5",
-  "I design and develop motion",
 ];
 
 export const EMAIL = "ulvin.oguzlu@gmail.com";
