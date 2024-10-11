@@ -287,7 +287,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "First job! 🥳 Web design and development for FitoBiyota (Current)",
     slideImage: "/timeline/fitobiyota.jpg",
-    shouldDrawLine: true,
+    shouldDrawLine: false,
     alignment: Branch.LEFT,
   },
   {
