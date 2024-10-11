@@ -285,7 +285,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     type: NodeTypes.CHECKPOINT,
     title: "First Professional Milestone!",
     size: ItemSize.SMALL,
-    subtitle: "First job! 🥳 Web design and development for FitoBiyota (Currunt)",
+    subtitle: "First job! 🥳 Web design and development for FitoBiyota (Current)",
     slideImage: "/timeline/fitobiyota.jpg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
