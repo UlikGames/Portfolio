@@ -287,14 +287,14 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     size: ItemSize.SMALL,
     subtitle: "First job! 🥳 Web design and development for FitoBiyota (Current)",
     slideImage: "/timeline/fitobiyota.jpg",
-    shouldDrawLine: true,
+    shouldDrawLine: false,
     alignment: Branch.LEFT,
   },
   {
     type: NodeTypes.CHECKPOINT,
     title: "2024",
     size: ItemSize.LARGE,
-    shouldDrawLine: false,
+    shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
   {
