@@ -283,16 +283,25 @@ export enum ItemSize {
 export const TIMELINE: Array<TimelineNodeV2> = [
   {
     type: NodeTypes.CHECKPOINT,
-    title: "2023",
+    title: "First Professional Milestone!",
+    size: ItemSize.SMALL,
+    subtitle: "First job! 🥳 Web design and development for FitoBiyota (Currunt)",
+    slideImage: "/timeline/fitobiyota.jpg",
+    shouldDrawLine: true,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
+    title: "2024",
     size: ItemSize.LARGE,
     shouldDrawLine: false,
     alignment: Branch.LEFT,
   },
   {
     type: NodeTypes.CHECKPOINT,
-    title: "Making some game projects (Current)",
+    title: "Start to make my dream project",
     size: ItemSize.SMALL,
-    subtitle: "Design and Developer GorGood Backrooms",
+    subtitle: "Designed and Developed Behind the Backrooms",
     slideImage: "/timeline/backrooms.jpg",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
@@ -309,7 +318,7 @@ export const TIMELINE: Array<TimelineNodeV2> = [
     title: "Lots of Projects",
     size: ItemSize.SMALL,
     subtitle:
-      "Contribute lots of non-official projects",
+      "Contribute lots of open-source projects on Github",
     slideImage: "/timeline/project.png",
     shouldDrawLine: true,
     alignment: Branch.LEFT,
