@@ -283,18 +283,25 @@ export enum ItemSize {
 export const TIMELINE: Array<TimelineNodeV2> = [
   {
     type: NodeTypes.CHECKPOINT,
+    title: "2025",
+    size: ItemSize.LARGE,
+    shouldDrawLine: false,
+    alignment: Branch.LEFT,
+  },
+  {
+    type: NodeTypes.CHECKPOINT,
     title: "First Professional Milestone!",
     size: ItemSize.SMALL,
     subtitle: "First job! 🥳 Web design and development for FitoBiyota (Current)",
     slideImage: "/timeline/fitobiyota.jpg",
-    shouldDrawLine: false,
+    shouldDrawLine: true,
     alignment: Branch.LEFT,
   },
   {
     type: NodeTypes.CHECKPOINT,
     title: "2024",
     size: ItemSize.LARGE,
-    shouldDrawLine: true,
+    shouldDrawLine: false,
     alignment: Branch.LEFT,
   },
   {
