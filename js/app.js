@@ -624,36 +624,60 @@ $(function() {
   // --------------------------------------------- //
 
   // --------------------------------------------- //
-  // Mailchimp Subscribe Form Start
+  // Get in Touch Form (Email Contact) Start
   // --------------------------------------------- //
-  $('.notify-form').ajaxChimp({
-    callback: mailchimpCallback,
-    url: 'https://club.us10.list-manage.com/subscribe/post?u=e8d650c0df90e716c22ae4778&amp;id=54a7906900&amp;f_id=00b64ae4f0'
-  });
+  $('.notify-form').submit(function() {
+    var th = $(this);
+    var email = th.find('input[name="email"]').val();
+    
+    if (!email) {
+      return false;
+    }
 
-  function mailchimpCallback(resp) {
-    if(resp.result === 'success') {
-      $('.notify').find('.form').addClass('is-hidden');
-      $('.notify').find('.subscription-ok').addClass('is-visible');
-      setTimeout(function() {
-        // Done Functions
-        $('.notify').find('.subscription-ok').removeClass('is-visible');
-        $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
-      }, 5000);
-    } else if(resp.result === 'error') {
+    $.ajax({
+      type: "POST",
+      url: "/api/send-email",
+      data: {
+        email: email,
+        admin_email: "ulvin.oguzlu@gmail.com",
+        project_name: "Ulik Studio",
+        form_subject: "New Contact - Get in Touch Form",
+        "E-mail": email,
+        "Message": "User wants to get in touch via footer form"
+      },
+      dataType: "json"
+    }).done(function(response) {
+      if (response && response.success) {
+        $('.notify').find('.form').addClass('is-hidden');
+        $('.notify').find('.subscription-ok').addClass('is-visible');
+        setTimeout(function() {
+          $('.notify').find('.subscription-ok').removeClass('is-visible');
+          $('.notify').find('.form').delay(300).removeClass('is-hidden');
+          th.trigger("reset");
+        }, 5000);
+      } else {
+        $('.notify').find('.form').addClass('is-hidden');
+        $('.notify').find('.subscription-error').addClass('is-visible');
+        setTimeout(function() {
+          $('.notify').find('.subscription-error').removeClass('is-visible');
+          $('.notify').find('.form').delay(300).removeClass('is-hidden');
+          th.trigger("reset");
+        }, 5000);
+      }
+    }).fail(function(xhr, status, error) {
+      console.error('Form submission error:', error);
       $('.notify').find('.form').addClass('is-hidden');
       $('.notify').find('.subscription-error').addClass('is-visible');
       setTimeout(function() {
-        // Done Functions
         $('.notify').find('.subscription-error').removeClass('is-visible');
         $('.notify').find('.form').delay(300).removeClass('is-hidden');
-        $('.notify-form').trigger("reset");
+        th.trigger("reset");
       }, 5000);
-    }
-  };
+    });
+    return false;
+  });
   // --------------------------------------------- //
-  // Mailchimp Subscribe Form End
+  // Get in Touch Form End
   // --------------------------------------------- //
 
   // --------------------------------------------- //
