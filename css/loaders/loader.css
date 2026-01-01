@@ -1,17 +1,4 @@
-/*! ------------------------------------------------
- * Project Name: Ulik - Digital Agency & Personal Portfolio HTML Template
- * Project Description: Elevate your digital presence with Ulik - dynamic and stylish HTML template designed for creative agencies and personal brands. With modern layouts, smooth interactions and a polished aesthetic, Ulik template helps showcase projects, services and expertise with clarity and impact.
- * Tags: mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean, agency, studio 
- * Version: 1.0.0
- * Build Date: July 2025
- * Last Update: August 2025
- * This product is available exclusively on Themeforest
- * Author: mix_design
- * Author URI: https://themeforest.net/user/mix_design */
-/*! File name: loader.css
- * ------------------------------------------------
- *
- * ------------------------------------------------
+/* ------------------------------------------------
  * Table of Contents
  * ------------------------------------------------
  *  01. Loader Styles
@@ -120,6 +107,7 @@
   --nl-white: #ffffff;
   --nl-black: #000000;
 }
+
 @media only screen and (min-width: 768px) {
   :root {
     --_radius-m: 2.6rem;
@@ -127,6 +115,7 @@
     --_radius-xl: 8rem;
   }
 }
+
 @media only screen and (min-width: 1200px) {
   :root {
     --_radius-xl: 8rem;
@@ -175,6 +164,7 @@
     --bg-demo-screen-09: var(--bg-demo-screen-09--light);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root {
     --base: var(--base--dark);
@@ -216,6 +206,7 @@
     --bg-demo-screen-09: var(--bg-demo-screen-09--dark);
   }
 }
+
 [color-scheme=light] {
   --base: var(--base--light);
   --base-rgb: var(--base-rgb--light);
@@ -307,6 +298,7 @@
   left: 0;
   z-index: 1000;
 }
+
 .loader.loaded {
   opacity: 0;
   visibility: hidden;
@@ -324,13 +316,13 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-align: center;
-     -moz-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .loader__content {
@@ -340,17 +332,17 @@
   bottom: auto;
   right: auto;
   -webkit-transform: translateX(-50%) translateY(-50%);
-     -moz-transform: translateX(-50%) translateY(-50%);
-      -ms-transform: translateX(-50%) translateY(-50%);
-          transform: translateX(-50%) translateY(-50%);
+  -moz-transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-     -moz-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   width: 100%;
   z-index: 2;
   color: var(--t-bright);
@@ -363,12 +355,13 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: end;
-     -moz-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
+  -moz-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
   overflow: hidden;
   line-height: 1;
 }
+
 .loader__count span {
   display: -webkit-inline-box;
   display: -moz-inline-box;
@@ -378,16 +371,19 @@
   letter-spacing: -0.06rem;
   color: var(--t-bright);
 }
+
 @media only screen and (min-width: 768px) {
   .loader__count span {
     font-size: 8rem;
   }
 }
+
 @media only screen and (min-width: 1200px) {
   .loader__count span {
     font-size: 10rem;
   }
 }
+
 @media only screen and (min-width: 1600px) {
   .loader__count span {
     font-size: 12rem;
